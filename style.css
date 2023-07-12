@@ -18,6 +18,31 @@ a{
     align-items: center;
     justify-content: center;
 }
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}    
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.section-title span {
+    color: rgb(65, 171, 241);
+}    
 
 /* hero section */
 #hero {
@@ -99,11 +124,11 @@ a{
     color: black;
     background-color: rgb(65, 171, 241);
 }
-#hero img {
-    max-width: 50%;
-    max-height: 50%;
+/* #hero img {
+    /* max-width: 50%;
+    max-height: 50%; 
     bottom: -50px;
-    /* filter: brightness(0) invert(); */
+     filter: brightness(0) invert(); 
     padding: 5px;
     display: flex;
     justify-content: center;
@@ -118,7 +143,7 @@ a{
  #hero img:hover {
     color: white;
     background-color: rgb(65, 171, 241);
- }
+ } */
 /* end of hero section */
 
 /* skills section */
@@ -132,30 +157,12 @@ a{
     margin: 0 auto;
     padding: 100px 0;
 }
-#skills .section-title {
-    font-size: 4rem;
-    font-weight: 300;
-    color: black;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    text-align: center;
-}
-#skills .section-title span {
-    color: rgb(65, 171, 241);
-}
-#skills .skills-top p{
-    font-size: 1.4rem;
-    margin-top: 5px;
-    line-height: 2.5rem;
-    font-weight: 300;
-    letter-spacing: .05rem;
-}
 #skills .skills-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 #skills .skills-item {
     flex-basis: 80%;
@@ -170,6 +177,7 @@ a{
     margin: 10px 5%;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 #skills .skills-item::after {
     content: '';
@@ -192,10 +200,93 @@ a{
     width: 100%;
     object-fit: cover;
 }
+#skills .skills-item h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}  
+#skills .skills-item p {
+    color: white;
+    word-spacing: 30px;
+}  
 
 
 /* end of skills section */
 
+/* Projetcs section */
+#projects .projects {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#projects .projects-header h1 {
+    margin-bottom: 50px;
+}
+#projects .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#projects .projects-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#projects .projects-info {
+    padding: 30px;
+    flex-basis: 50%;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    color: white;
+}
+#projects .projects-info h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+#projects .projects-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+#projects .projects-info p {
+    color: white;
+}
+#projects .project-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+}
+#projects .project-img:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.7;
+}
+#projects .project-img img {
+    transition: .3s ease transform;
+}
+#projects .projects-item:hover .project-img img {
+    transform: scale(1.1);
+}
+
+/* end of Projects section */
 
 /* keyframes */
 @keyframes text_reveal_box{
