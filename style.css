@@ -262,27 +262,29 @@ p {
 #hero h1:nth-child(3) span{
     animation-delay: 2.5s;
 }
-
-/* #hero img {
-    /* max-width: 50%;
-    max-height: 50%; 
-    bottom: -50px;
-     filter: brightness(0) invert(); 
-    padding: 5px;
+#hero .links {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 62px; 
-    margin-left: 20px; 
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-    
-    
- }
- #hero img:hover {
-    color: white;
-    background-color: rgb(65, 171, 241);
- } */
+    max-width: 100px;
+    max-height: 50px;
+}
+#hero .link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 18px;
+}
+#hero .link img {
+    width: 65px;
+    height: 100px;
+    filter: brightness(0) invert();
+    object-fit: contain;
+}
+#hero .link img {
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+#hero .link:hover img {
+    filter: grayscale(0);
+}    
 /* end of hero section */
 
 /* about section */
@@ -616,6 +618,11 @@ p {
         #hero h1 {
             font-size: 7rem;
         }
+        #hero .link img {
+        width: 80px;
+        height: 100px;
+        object-fit: contain;
+    }
     /* End of Hero */
 
     /* About */
@@ -711,7 +718,7 @@ p {
 /* Media for Desktop */
 @media only screen and (min-width: 1200px) {
 
-    /* heaer */
+    /* header */
     #header .hamburger {
         display: none;
     }
@@ -732,6 +739,14 @@ p {
         display: none;
     }
     /* end of header */
+
+    /* hero */
+    #hero .link img {
+        width:90px;
+        height: 120px;
+        object-fit: contain;
+    }
+    /* end of hero */
 
 #skills .skills-bottom .skills-item {
     flex-basis: 22%;
